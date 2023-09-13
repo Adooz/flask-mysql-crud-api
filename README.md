@@ -24,15 +24,14 @@
 
 #### Sample Request
 ```bash
-$ curl -H "Content-Type: application/json" -d "{\"name\": \"philip\"}" http://localhost:5000/api
+$ curl -H "Content-Type: application/json" -d "{\"name\": \"Philip\"}" http://localhost:5000/api
 ```
 #### Response 
 ```json
 {
-    "message":"Person created successfully",
-    "newPerson":{
-        "name":"philip",
+    {"message":"Person created successfully",
         "id":"1",
+        "name": "Philip"
         }
 }
 ```
@@ -53,7 +52,7 @@ $ curl -X GET http://localhost:5000/api/1
  {
   "person": [**
     {**
-        "_id":"1",
+        "id":"1",
         "name":"Philip",
     }
   ]
@@ -74,11 +73,7 @@ $ curl -X PATCH -H "Content-Type: application/json" -d '{\"name\": \"tomson\"}' 
 
 ```json
  {
-    "message":"Successfully Updated",
-    "updatedPerson": {
-        "_id":"1",
-        "name":"tomson",
-    }
+    "message":"Successfully Updated"
 }
 ```
 
@@ -96,10 +91,7 @@ $ curl -X DELETE http://localhost:5000/api/1
 ```json
 {
     "message":"Person successfully deleted",
-    "deletedPerson":{
-        "_id":"1",
-        "name":"tomson",
-    }
+    
 }
 
 ```
