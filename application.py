@@ -27,7 +27,12 @@ def create_person():
         person = Person(name)
         db.session.add(person)
         db.session.commit()
-        return jsonify({'message': 'Person created successfully'}), 201
+        response_data = {
+            'id': person.id,  # Include the ID in the response
+            'message': 'Person created successfully'
+        }
+        return jsonify(response_data), 201
+        #return jsonify({'message': 'Person created successfully'}), 201
     except IntegrityError:
         db.session.rollback()
         return jsonify({'message': 'Duplicate entry. Person already exists'}), 409
