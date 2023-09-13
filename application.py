@@ -29,7 +29,7 @@ def create_person():
         db.session.add(person)
         db.session.commit()
         response_data = {
-            'id': person.id,  # Include the ID in the response
+            'id': person.id,  
             'message': 'Person created successfully'
         }
         return jsonify(response_data), 201
