@@ -13,7 +13,7 @@
     $ pip3 install -r requirements.txt
 
     // start the server
-    $ pyhton3 application.py
+    $ python3 application.py
 ```
 
 # API REFERENCES
